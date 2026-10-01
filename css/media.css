@@ -1,0 +1,384 @@
+@media (max-width: 1316px) {
+    .new-products-cards-list,
+    .catalog-products-cards-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .new-products-card {
+        max-width: none;
+    }
+
+    .catalog-buttons-list {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .hero {
+        background: var(--color-light);
+    }
+
+    .hero::before {
+        background: linear-gradient(
+            to bottom,
+            rgba(251, 250, 248, 0.75) 0%,
+            rgba(251, 250, 248, 0.35) 45%,
+            transparent 75%
+        );
+    }
+
+    .header {
+        padding: 25px 35px;
+    }
+
+    .header-menu-list {
+        gap: 25px;
+    }
+
+    .banner-body {
+        align-items: center;
+        justify-content: center;
+
+        min-height: calc(100svh - 80px);
+
+        padding: 40px 35px;
+
+        text-align: center;
+    }
+
+    .banner-main-name {
+        width: 90%;
+        max-width: 650px;
+    }
+
+    .banner-description {
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .modal-window {
+        grid-template-columns: 1fr;
+        max-height: calc(100svh - 32px);
+    }
+
+    .modal-gallery {
+        grid-template-rows: minmax(350px, 55svh) 180px;
+    }
+
+    .modal-product {
+        padding: 24px;
+    }
+
+    .catalog-content-text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .catalog-filters {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 100svh;
+
+        background-position: 65% center;
+    }
+
+    .hero::before {
+        background: linear-gradient(
+            to bottom,
+            rgba(251, 250, 248, 0.75) 0%,
+            rgba(251, 250, 248, 0.35) 45%,
+            transparent 70%
+        );
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+
+    .header-logo {
+        font-size: 20px;
+    }
+
+    .burger {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        width: 44px;
+        height: 44px;
+
+        padding: 0;
+
+        background: transparent;
+        cursor: pointer;
+
+        z-index: 20;
+    }
+
+    .burger-line {
+        display: block;
+
+        width: 24px;
+        height: 2px;
+
+        background-color: var(--color-dark);
+
+        transition: opacity 0.3s ease;
+    }
+
+    .header.menu-open .burger-line {
+        opacity: 0;
+    }
+
+    .burger::before,
+    .burger::after {
+        content: "";
+
+        position: absolute;
+
+        width: 24px;
+        height: 2px;
+
+        background-color: var(--color-dark);
+
+        opacity: 0;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+    .header.menu-open .burger::before,
+    .header.menu-open .burger::after {
+        opacity: 1;
+    }
+
+    .header.menu-open .burger::before {
+        transform: rotate(45deg);
+    }
+
+    .header.menu-open .burger::after {
+        transform: rotate(-45deg);
+    }
+
+
+    .header-menu {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+
+        width: min(80%, 320px);
+        height: 100svh;
+
+        padding: 110px 30px 30px;
+
+        background: var(--color-light);
+
+        transform: translateX(100%);
+
+        transition: transform 0.35s ease;
+
+        z-index: 10;
+    }
+
+    .header-menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .header-menu-link {
+        font-size: 20px;
+    }
+
+    .banner-body {
+        min-height: calc(100svh - 84px);
+
+        padding: 40px 20px 60px;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .banner-main-name {
+        width: 100%;
+        max-width: 500px;
+        line-height: 0.95;
+    }
+
+    .banner-description {
+        width: 100%;
+        max-width: 400px;
+
+        line-height: 1.4;
+
+        opacity: 0.9;
+    }
+
+    .banner-main-name:not(:last-child),
+    .banner-description:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .banner-button {
+        padding: 11px 22px;
+        font-size: 17px;
+    }
+
+    .header-menu {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+
+        width: min(80vw, 320px);
+        height: 100svh;
+
+        padding: 100px 30px 30px;
+
+        background: var(--color-light);
+
+        transform: translateX(100%);
+
+        transition: transform 0.3s ease;
+
+        z-index: 10;
+    }
+
+    .header-menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .header-menu-link {
+        font-size: 20px;
+    }
+
+    .header.menu-open .header-menu {
+        transform: translateX(0);
+    }
+
+    .header.menu-open .burger-line {
+        opacity: 0;
+    }
+
+    .header.menu-open .burger::before,
+    .header.menu-open .burger::after {
+        opacity: 1;
+    }
+
+    .header.menu-open .burger::before {
+        transform: rotate(45deg);
+    }
+
+    .header.menu-open .burger::after {
+        transform: rotate(-45deg);
+    }
+
+    .modal {
+        padding: 0;
+    }
+
+    .modal-window {
+        width: 100%;
+        height: 100svh;
+        max-height: none;
+        border-radius: 0;
+        overflow-y: auto;
+    }
+
+    .modal-gallery {
+        grid-template-rows: minmax(300px, 55svh) 150px;
+        gap: 10px;
+        padding: 16px;
+    }
+
+    .modal-product {
+        padding: 10px 16px 30px;
+    }
+
+    .modal-title {
+        font-size: clamp(44px, 14vw, 64px);
+    }
+
+    .modal-price {
+        font-size: 26px;
+    }
+
+    .modal-buy-row {
+        grid-template-columns: 1fr 44px;
+    }
+
+    .modal-quantity {
+        grid-column: 1 / -1;
+        width: fit-content;
+    }
+
+    .modal-button {
+        width: 100%;
+    }
+
+    .catalog-products-cards-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 635px) {
+    .new-products-cards-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner-main-name {
+        max-width: 90%;
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .header-logo {
+        font-size: 18px;
+    }
+
+    .banner-body {
+        padding-inline: 20px;
+    }
+
+    .banner-main-name {
+        font-size: 40px;
+    }
+
+    .banner-description {
+        max-width: 320px;
+        font-size: 16px;
+    }
+
+}

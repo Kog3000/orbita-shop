@@ -14,9 +14,7 @@
 ## Структура проекта
 
 ├── index.html 
-├── catalog.html 
-├── product.html 
-├── order.html 
+├── catalog.html  
 ├── contacts.html 
 ├── css/ 
 │   
@@ -25,6 +23,8 @@
 │   
 └── main.js 
 ├── images/ 
+│   
+└── main.js 
 ├── README.md 
 └── .gitignore
 
