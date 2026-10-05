@@ -1,7 +1,3 @@
-/* ==============================
-   TABLET / SMALL DESKTOP
-   ============================== */
-
 @media (max-width: 1316px) {
     :root {
         --padding-inline: 35px;
@@ -50,14 +46,10 @@
         gap: 40px;
     }
 
-    .about-content-statistics-list {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .about-content-statistics-item {
-        flex: 1 1 calc(50% - 30px);
-        min-width: 240px;
+    .about-content-image:first-child,
+    .about-content-image:last-child {
+        height: 100%;
+        width: auto;
     }
 
     .catalog-filters {
@@ -73,10 +65,6 @@
         gap: 20px;
     }
 }
-
-/* ==============================
-   TABLET
-   ============================== */
 
 @media (max-width: 950px) {
     :root {
@@ -114,10 +102,8 @@
     .banner-body {
         top: 0;
         align-items: center;
-        justify-content: center;
         gap: 35px;
         min-height: calc(100svh - 130px);
-        padding: 40px var(--padding-inline) 70px;
         text-align: center;
     }
 
@@ -153,10 +139,6 @@
 
     .description {
         width: 100%;
-    }
-
-    .about-content-images {
-        height: 420px;
     }
 
     .about-content-statistics-list {
@@ -272,10 +254,6 @@
     }
 }
 
-/* ==============================
-   MOBILE
-   ============================== */
-
 @media (max-width: 600px) {
     :root {
         --padding-inline: 20px;
@@ -335,27 +313,23 @@
 
     .banner-body {
         gap: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         min-height: calc(100svh - 135px);
-        padding: 35px var(--padding-inline) 55px;
     }
 
     .banner-main-name {
         width: 100%;
         max-width: 500px;
-        font-size: clamp(42px, 13vw, 65px);
         line-height: .95;
     }
 
     .banner-description {
         width: 100%;
         max-width: 400px;
-        font-size: 16px;
+        display: none;
         line-height: 1.4;
-    }
-
-    .banner-button {
-        padding: 11px 22px;
-        font-size: 17px;
     }
 
     .hero:not(:last-child) {
@@ -369,7 +343,6 @@
     }
 
     .new-products-header {
-        align-items: flex-end;
         gap: 15px;
     }
 
@@ -421,7 +394,7 @@
     .about-content-image:first-child,
     .about-content-image:last-child {
         width: 100%;
-        height: 50vw;
+        height: auto;
         min-height: 220px;
         max-height: 340px;
     }
@@ -451,11 +424,11 @@
     }
 
     .about-content-statistics-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 25px 15px;
-        padding-top: 30px;
-        padding-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding-block: 60px;
     }
 
     .about-content-statistics-item {
