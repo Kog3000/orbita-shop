@@ -43,7 +43,7 @@
 
 ## Структура проекта
 
-```text
+```
 ├── index.html
 ├── about.html
 ├── catalog.html
@@ -73,6 +73,7 @@
 │
 ├── README.md
 └── .gitignore
+```
 
 ## Используемые технологии
 
