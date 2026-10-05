@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/media.css">
-    <title>Document</title>
+    <title>Контакты</title>
 </head>
 <body>
     <header class="header">
@@ -16,12 +16,6 @@
         <a href="#" class="header-logo">
             Орбита
         </a>
-
-        <button class="burger" type="button" aria-label="Открыть меню">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-        </button>
 
         <nav class="header-menu">
             <ul class="header-menu-list">
@@ -82,7 +76,127 @@
 
     </header>
 
-    <footer class="footer">
+    <main class="contacts-content">
+        <section class="contacts-header">
+            <div class="contacts-content-text content-box">
+                <p class="contacts-content-title page-title">Контакты</p>
+                <p class="contacts-content-description description page-description">
+                    Мы всегда рады вашему интересу, вопросам и идеям. Давайте создавать красивые пространства вместе.
+                </p>
+            </div>
+        </section>
+
+        <section class="contacts-soc1als">
+
+            <ul class="contacts-soc1als-list">
+
+                <li class="contacts-soc1als-item">
+                    <h3 class="contacts-soc1als-item-name">Телефон</h3>
+                    <p class="contacts-soc1als-item-content">+7 977 777 77-77</p>
+                </li>
+
+                <li class="contacts-soc1als-item">
+                    <h3 class="contacts-soc1als-item-name">E-mail</h3>
+                    <p class="contacts-soc1als-item-content">orbita@orbita.ru</p>
+                </li>
+
+                <li class="contacts-soc1als-item">
+                    <h3 class="contacts-soc1als-item-name">Адрес</h3>
+                    <address class="contacts-soc1als-item-content">Москва, ул. Орбитная, д. 7</address>
+                </li>
+
+                <li class="contacts-soc1als-item">
+
+                    <h3 class="contacts-soc1als-item-name">График работы</h3>
+
+                    <ul class="contacts-soc1als-item-schedule-list">
+
+                        <li class="contacts-soc1als-schedule-item">
+                            <p class="contacts-soc1als-item-schedule-days">
+                                Пн — Пт
+                            </p>
+                            <p class="contacts-soc1als-item-schedule-time">
+                                10:00 — 20:00
+                            </p>
+                        </li>
+
+                        <li class="contacts-soc1als-schedule-item">
+                            <p class="contacts-soc1als-item-schedule-days">
+                                Сб — Вс
+                            </p>
+                            <p class="contacts-soc1als-item-schedule-time">
+                                11:00 — 19:00
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section class="contacts-form">
+            <div class="contacts-form-wrapper">
+
+                <img
+                    src="./images/modal/5.png"
+                    alt="Интерьер"
+                    class="contacts-form-image"
+                >
+
+                <form action="" class="contacts-form-body">
+                    <h2 class="contacts-form-title">Напишите нам</h2>
+
+                    <p class="contacts-form-description">
+                        Оставьте сообщение, и мы свяжемся с вами<br>
+                        в ближайшее время.
+                    </p>
+
+                    <input
+                        type="text"
+                        name="name"
+                        class="contacts-form-input input"
+                        placeholder="Имя *"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        name="email"
+                        class="contacts-form-input input"
+                        placeholder="E-mail *"
+                        required
+                    >
+
+                    <select name="subject" class="contacts-form-input input">
+                        <option value="" selected disabled>Тема</option>
+                        <option value="question">Вопрос</option>
+                        <option value="order">Заказ</option>
+                        <option value="cooperation">Сотрудничество</option>
+                    </select>
+
+                    <textarea
+                        name="message"
+                        class="contacts-form-input contacts-form-textarea input"
+                        placeholder="Сообщение *"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="contacts-form-button button">
+                        Отправить
+                    </button>
+
+                    <p class="contacts-form-policy">
+                        Нажимая «Отправить», вы соглашаетесь<br>
+                        с политикой конфиденциальности.
+                    </p>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- <footer class="footer">
         <div class="footer-body">
 
             <div class="footer-contacts">
@@ -186,7 +300,7 @@
                 </p>
             </form>
         </div>
-    </footer>
+    </footer> -->
     
 </body>
 </html>

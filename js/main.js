@@ -1,20 +1,3 @@
-const header = document.querySelector('.header')
-const burger = document.querySelector('.burger')
-const menuLinks = document.querySelectorAll('.header-menu-link')
-
-if (burger && header) {
-    burger.addEventListener('click', () => {
-        header.classList.toggle('menu-open')
-    })
-}
-
-menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        header.classList.remove('menu-open')
-    })
-})
-
-
 const modal = document.getElementById('product-modal')
 const cards = document.querySelectorAll('.catalog-products-card')
 
