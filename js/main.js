@@ -94,3 +94,60 @@ if (modal && cards.length) {
         }
     })
 }
+
+
+
+const toHeartButtons = [...document.querySelectorAll('.to-heart-button')]
+
+toHeartButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+        event.stopPropagation()
+        button.classList.toggle('checked')
+    })
+})
+
+
+
+const catalogButtons = [...document.querySelectorAll('.catalog-buttons-item button')]
+
+catalogButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        button.classList.toggle('button-toggle')
+    })
+})
+
+
+
+const filterItems = document.querySelectorAll('.catalog-filters-item')
+
+filterItems.forEach(item => {
+    const trigger = item.querySelector('.catalog-filter-trigger')
+
+    trigger.addEventListener('click', () => {
+        const isOpen = item.classList.contains('is-open')
+
+        // Закрываем остальные списки
+        filterItems.forEach(filter => {
+            filter.classList.remove('is-open')
+            filter.querySelector('.catalog-filter-trigger')
+                .setAttribute('aria-expanded', 'false')
+        })
+
+        // Переключаем выбранный список
+        if (!isOpen) {
+            item.classList.add('is-open')
+            trigger.setAttribute('aria-expanded', 'true')
+        }
+    })
+})
+
+// Закрытие при клике вне фильтров
+document.addEventListener('click', event => {
+    if (!event.target.closest('.catalog-filters-list')) {
+        filterItems.forEach(item => {
+            item.classList.remove('is-open')
+            item.querySelector('.catalog-filter-trigger')
+                .setAttribute('aria-expanded', 'false')
+        })
+    }
+})

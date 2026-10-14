@@ -88,7 +88,7 @@
 
             <ul class="catalog-buttons-list">
                 <li class="catalog-buttons-item">
-                    <button type="button" class="catalog-button toggled-button button">Все товары</button>
+                    <button type="button" class="catalog-button button button-toggle">Все товары</button>
                 </li>
 
                 <li class="catalog-buttons-item">
@@ -111,35 +111,78 @@
 
         <section class="catalog-products">
             <div class="catalog-filters">
+                
                 <ul class="catalog-filters-list">
+
                     <li class="catalog-filters-item">
-                        <p class="catalog-filters-item-name">Тип</p>
-                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.07141 1.07141L7.29868 8.07141L13.526 1.07141" stroke="black" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <button class="catalog-filter-trigger" type="button"
+                                aria-expanded="false">
+                            <span>Тип</span>
+                            <span class="filter-arrow"></span>
+                        </button>
+
+                        <div class="catalog-filter-dropdown">
+                            <label><input type="checkbox" value="Настольная лампа"> Настольные лампы</label>
+                            <label><input type="checkbox" value="Подвесная лампа"> Подвесные лампы</label>
+                            <label><input type="checkbox" value="Декор"> Декор</label>
+                            <label><input type="checkbox" value="Аксессуары"> Аксессуары</label>
+                        </div>
                     </li>
 
                     <li class="catalog-filters-item">
-                        <p class="catalog-filters-item-name">Материал</p>
-                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.07141 1.07141L7.29868 8.07141L13.526 1.07141" stroke="black" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <button class="catalog-filter-trigger" type="button"
+                                aria-expanded="false">
+                            <span>Материал</span>
+                            <span class="filter-arrow"></span>
+                        </button>
+
+                        <div class="catalog-filter-dropdown">
+                            <label><input type="checkbox" value="Стекло"> Стекло</label>
+                            <label><input type="checkbox" value="Металл"> Металл</label>
+                            <label><input type="checkbox" value="Дерево"> Дерево</label>
+                            <label><input type="checkbox" value="Керамика"> Керамика</label>
+                        </div>
                     </li>
 
                     <li class="catalog-filters-item">
-                        <p class="catalog-filters-item-name">Цвет</p>
-                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.07141 1.07141L7.29868 8.07141L13.526 1.07141" stroke="black" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <button class="catalog-filter-trigger" type="button"
+                                aria-expanded="false">
+                            <span>Цвет</span>
+                            <span class="filter-arrow"></span>
+                        </button>
+
+                        <div class="catalog-filter-dropdown">
+                            <label><input type="checkbox" value="Белый"> Белый</label>
+                            <label><input type="checkbox" value="Чёрный"> Чёрный</label>
+                            <label><input type="checkbox" value="Оранжевый"> Оранжевый</label>
+                            <label><input type="checkbox" value="Розовый"> Розовый</label>
+                        </div>
                     </li>
 
                     <li class="catalog-filters-item">
-                        <p class="catalog-filters-item-name">Цена</p>
-                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.07141 1.07141L7.29868 8.07141L13.526 1.07141" stroke="black" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <button class="catalog-filter-trigger" type="button"
+                                aria-expanded="false">
+                            <span>Цена</span>
+                            <span class="filter-arrow"></span>
+                        </button>
+
+                        <div class="catalog-filter-dropdown price-dropdown">
+                            <label>
+                                От
+                                <input type="number" class="price-min"
+                                    placeholder="0" min="0">
+                            </label>
+
+                            <label>
+                                До
+                                <input type="number" class="price-max"
+                                    placeholder="10000" min="0">
+                            </label>
+                        </div>
                     </li>
+
                 </ul>
+
 
                 <div class="catalog-filters-sort">
                     <p class="catalog-filters-sort-name">Сортировка</p>
@@ -170,6 +213,7 @@
                         src="./images/products_on_main_page/1.png" 
                         alt="Оранжевая лампа"
                         class="catalog-products-card-image card-image">
+                    <button class="to-heart-button"></button>
                     <div class="catalog-products-card-body card-body">
                         <p class="catalog-products-card-title card-title">Аура</p>
                         <p class="catalog-products-card-price small-acsent-title card-price">3 000 руб.</p>
@@ -190,6 +234,7 @@
                         src="./images/products_on_main_page/2.png" 
                         alt="Розовая лампа"
                         class="catalog-products-card-image card-image">
+                    <button class="to-heart-button"></button>
                     <div class="catalog-products-card-body">
                         <p class="catalog-products-card-title card-title">Роза</p>
                         <p class="catalog-products-card-price small-acsent-title card-price">3 500 руб.</p>
@@ -208,6 +253,7 @@
                         src="./images/products_on_main_page/3.png" 
                         alt="Огненная лампа"
                         class="catalog-products-card-image card-image">
+                    <button class="to-heart-button"></button>
                     <div class="catalog-products-card-body card-body">
                         <p class="catalog-products-card-title card-title">Пламя</p>
                         <p class="catalog-products-card-price small-acsent-title card-price">3 700 руб.</p>
@@ -227,6 +273,7 @@
                         src="./images/products_on_main_page/4.png" 
                         alt="Лампа в виде океанского цветка"
                         class="catalog-products-card-image card-image">
+                    <button class="to-heart-button"></button>
                     <div class="catalog-products-card-body card-body">
                         <p class="catalog-products-card-title card-title">Океания</p>
                         <p class="catalog-products-card-price small-acsent-title card-price">4 000 руб.</p>
@@ -247,6 +294,7 @@
                         src="./images/catalog/1.png" 
                         alt="Оранжевая стеклянная лампа"
                         class="catalog-products-card-image card-image">
+                    <button class="to-heart-button"></button>
                     <div class="catalog-products-card-body card-body">
                         <p class="catalog-products-card-title card-title">Дюна</p>
                         <p class="catalog-products-card-price small-acsent-title card-price">4 000 руб.</p>
