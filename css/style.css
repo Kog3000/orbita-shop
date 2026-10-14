@@ -577,6 +577,12 @@ input:not(:last-child) {
     font: inherit;
 }
 
+.price-min,
+.price-max {
+    color: var(--color-dark);
+    padding-inline: 10px;
+}
+
 .catalog-products-card-body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
